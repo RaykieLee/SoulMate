@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
     <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS"
         tools:ignore="ProtectedPermissions" />
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"
-        android:maxSdkVersion="28"/><!--9.0及以上才需要此权限-->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/><!--9.0及以上才需要此权限-->
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application

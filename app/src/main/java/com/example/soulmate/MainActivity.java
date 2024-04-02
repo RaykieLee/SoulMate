@@ -2,6 +2,7 @@ package com.example.soulmate;
 
 import android.app.ActivityManager;
 import android.app.AppOpsManager;
+import android.app.Notification;
 import android.app.Service;
 import android.app.usage.UsageStats;
 import android.app.usage.UsageStatsManager;
@@ -36,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        checkPermissionStatus();
+//        checkPermissionStatus();
         // 检查悬浮窗权限
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !Settings.canDrawOverlays(this)) {
             Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
@@ -46,8 +47,6 @@ public class MainActivity extends AppCompatActivity {
         if (!OpenNotificationsUtil.isNotificationEnabledForApp(this)) {//未开启通知，去开启
             OpenNotificationsUtil.openNotificationSettingsForApp(this);
         }
-
-
         // 开启前台应用监听服务
 //        startService(new Intent(this, ForegroundAppService.class));
     }
